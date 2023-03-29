@@ -1,0 +1,36 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__label {
+        position: absolute;
+        top: 0.75em;
+        left: 1.5em;
+        z-index: 9998;
+        font-size: 0.8em;
+        transition: 0.2s all;
+        color: #333;
+    }
+
+    &__input {
+        z-index: 9999;
+        background-color: transparent;
+        padding: .75em;
+        border-radius: 4px;
+    }
+
+    &:focus-within > &__input {
+        z-index: 9998;
+    }
+
+    &:focus-within > &__label {
+        z-index: 9999;
+        top: -.75em;
+        left: 1em;
+        padding: 0 0.2em;
+        background-color: #F2F2F2;
+        color: #000;
+    }
+}
+
