@@ -11,12 +11,12 @@ function Field({
     setValue
 }) {
 
-    // const valueNull = isNull(value)
+    const valueNull = isNull(value)
 
     return (
         <div className="field">
             {
-                label && (
+                label && valueNull && (
                     <label className="field__label">{label}</label>
                 )
             }
