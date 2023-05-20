@@ -16,11 +16,11 @@ function Field({
     return (
         <div className="field">
             {
-                label && valueNull && (
-                    <label className="field__label">{label}</label>
+                label && (
+                    <label className={"field__label " + (!valueNull ? " field__label-opened" : "")}>{label}</label>
                 )
             }
-            <input className="field__input" type={type} value={value} onChange={(e) => { setValue(e.target.value )}}/>
+            <input className={"field__input " + (!valueNull ? "field__input-opened" : "")} type={type} value={value} onChange={(e) => { setValue(e.target.value )}}/>
         </div>
     );
 };
